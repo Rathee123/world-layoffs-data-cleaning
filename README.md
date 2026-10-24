@@ -1,76 +1,78 @@
 # World Layoffs Data Cleaning Using MySQL
 
-## 📌 Project Overview
+## Project Overview
 
-This project focuses on cleaning and preparing a global layoffs dataset using **MySQL**. The objective is to improve data quality by identifying duplicate records, standardizing inconsistent values, handling missing data, and removing unnecessary records.
+This project focuses on cleaning a global layoffs dataset using MySQL. The goal is to improve data quality and prepare the dataset for further analysis.
 
-The project demonstrates practical SQL skills and fundamental data-cleaning techniques used to prepare raw datasets for reliable analysis.
+The project covers practical data-cleaning tasks, including identifying duplicate records, standardizing inconsistent values, handling missing data, and checking the quality of the cleaned dataset.
 
-## 🎯 Project Objectives
+## Tools Used
 
-* Identify and remove duplicate records.
-* Standardize company names, industry classifications, and other inconsistent values.
-* Ensure dates are stored in a consistent format.
-* Identify and handle `NULL` and blank values.
-* Remove irrelevant records where appropriate.
-* Prepare a clean, structured dataset for Exploratory Data Analysis (EDA).
+* MySQL
+* MySQL Workbench
 
-## 🛠️ Tools & Technologies
+## Dataset
 
-* **Database:** MySQL
-* **Development Environment:** MySQL Workbench
-* **Language:** SQL
+The dataset contains information about company layoffs, including company names, locations, industries, the number and percentage of employees laid off, dates, company stages, countries, and funds raised.
 
-## 🔍 Data Cleaning Workflow
+## Data Cleaning Process
 
-### 1. Data Preparation
+### 1. Created a Staging Table
 
-Created staging tables to preserve the original dataset and perform cleaning operations without modifying the source data.
+Created a staging table to preserve the original dataset and perform cleaning operations on a separate copy.
 
-### 2. Duplicate Identification and Removal
+### 2. Identified and Removed Duplicate Records
 
-Identified duplicate records using SQL window functions and removed duplicates to improve data accuracy.
+Used SQL window functions, including `ROW_NUMBER()`, to identify duplicate records based on multiple columns.
 
-### 3. Data Standardization
+### 3. Standardized Data
 
-Standardized inconsistent company names, industry classifications, and other categorical values to maintain data consistency.
+Reviewed inconsistent values and standardized relevant company and industry information where appropriate.
 
-### 4. Date Format Standardization
+### 4. Standardized Date Formats
 
-Converted date values into a consistent date format to support accurate filtering, sorting, and time-based analysis.
+Worked on converting date values into a consistent date format for reliable analysis.
 
-### 5. Missing Value Handling
+### 5. Handled Missing and Blank Values
 
-Identified `NULL` and blank values, investigated missing information, and handled them where appropriate.
+Identified `NULL` and blank values in relevant columns. Where a missing industry value could be reliably inferred from another record for the same company, it was updated. Unconfirmed values were left missing rather than guessed.
 
-### 6. Data Quality Improvement
+### 6. Reviewed Unnecessary Records
 
-Reviewed the dataset and removed records that were unnecessary for analysis, where justified.
+Reviewed records during the cleaning process and removed records considered unsuitable for the analysis.
 
-### 7. Final Dataset Preparation
+### 7. Performed Data Quality Checks
 
-Prepared the cleaned dataset for future Exploratory Data Analysis (EDA) and business insights.
+Checked the cleaned dataset for duplicate records and missing values to assess its quality before further analysis.
 
-## 💡 Key Skills Demonstrated
+## SQL Skills Demonstrated
 
-* SQL Data Cleaning
-* Data Standardization
-* Duplicate Detection and Removal
-* Missing Value Handling
-* MySQL Window Functions
+* Data cleaning and preparation
+* Creating and working with staging tables
+* Window functions: `ROW_NUMBER()`
 * Common Table Expressions (CTEs)
-* Data Quality Management
-* Database Operations
+* Handling `NULL` and blank values
+* Data standardization
+* Date formatting
+* Duplicate detection and removal
+* Data quality checks
 
-## 📂 Project File
+## Project File
 
-* World_Layoffs_Data_Cleaning.sql — SQL script containing the data-cleaning queries.
+* World_Layoffs_Data_Cleaning.sql — Contains the SQL queries used during the data-cleaning process.
 
-## 🚀 Project Outcome
+## Outcome
 
-Developed a structured and consistent dataset by applying SQL-based data-cleaning techniques. This project establishes a foundation for further data exploration and analysis.
+The project provided practical experience in preparing raw data for analysis using SQL. It also demonstrated the importance of preserving original data, identifying data-quality issues, and avoiding unsupported assumptions when handling missing values.
 
-## 👩‍💻 Author
+The cleaned dataset was subsequently used for a separate Exploratory Data Analysis (EDA) project.
 
-**Ratheena Aaskeen**
-Aspiring Data Analyst
+## Related Project
+
+**World Layoffs Exploratory Data Analysis Using MySQL**
+
+This project uses SQL to explore layoff trends across companies, industries, countries, and years.
+
+## Author
+
+Ratheena Aaskeen
